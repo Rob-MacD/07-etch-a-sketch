@@ -1,0 +1,45 @@
+<!-- Doodle Pad v1.0 -->
+<!-- Written by Rob MacDonald -->
+<!-- July 25 2022 -->
+<!-- Part of The Odin Project curriculum -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doodle Pad</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="master">
+      <div id="content">
+        <div id="header">
+          <h1>Doodle Pad</h1>
+        </div>
+        <div id="main">
+          <div id="controls">
+            <div id="controls-slider">
+              <p>Size:</p>
+              <input id="padSize" type="range" min="1" max="100" value="50" oninput="updateValue(this.value)" />
+            </div>
+            <div id="controls-value">
+              <p id="sizeValue">50</p>
+            </div>
+            <div id="controls-button">
+              <button id="applySize" onclick="drawDoodlePad()">Apply</button>&nbsp;
+              <button id="resetButton" onclick="resetAll()">Reset All</button>
+            </div>
+            <div id="controls-color">
+              <p>Color:&nbsp;</p>
+              <input id="colorPicker" type="color" />
+            </div>
+          </div>
+          <div id="doodlePad"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
